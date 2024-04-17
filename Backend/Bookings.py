@@ -5,8 +5,7 @@ from datetime import datetime
 class Bookings(BaseModel): #no RLS
     name : str
     email : str
-    phone: str
-    location_of_shoot: str  
+    phone: str 
     message: str
     date: str
     Owner_ID: str
