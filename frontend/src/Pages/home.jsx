@@ -1,5 +1,4 @@
 import React from "react"; // Assuming there's a CSS file for styling
-import "../index.css";
 
 function Home() {
   return (
