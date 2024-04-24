@@ -1,18 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const primaryNav = [
-  { title: "Home", url: "/" },
-  { title: "Order", url: "/order" },
-];
-
-const Navigation = ({ primaryNav }) => {
+const Navigation = ({ navItems }) => {
   return (
     <nav>
       <ul>
-        {primaryNav.map((link, index) => {
+        {navItems.map((link, index) => {
           return (
-            <li key={`${link.title}-${index}`} className="NavLink">
+            <li key={`${link.title}-${index}`}>
               <Link to={link.url}>{link.title}</Link>
             </li>
           );
@@ -20,6 +15,10 @@ const Navigation = ({ primaryNav }) => {
       </ul>
     </nav>
   );
+};
+
+Navigation.propTypes = {
+  navItems: PropTypes.array,
 };
 
 export default Navigation;

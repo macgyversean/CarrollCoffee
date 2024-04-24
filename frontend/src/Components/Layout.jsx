@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "./navigation";
+import { Link } from "react-router-dom";
 
 const primaryNav = [
   { title: "Home", url: "/" },
@@ -9,7 +10,7 @@ const primaryNav = [
 const Layout = () => {
   return (
     <>
-      <Navigation />
+      <Navigation navItems={primaryNav} />
       <Outlet />
     </>
   );

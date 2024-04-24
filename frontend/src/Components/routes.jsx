@@ -1,14 +1,11 @@
-import { createBrowserRouter, Form, RouterProvider } from "react-router-dom";
-import { useAuth } from "../AuthContext";
-import Layout from "../pages/Layout";
-import Home from "./Home";
-import Order, { action as orderAction } from "./Order";
+import Layout from "./Layout";
+import Home from "../Pages/home";
+import Order from "../Pages/Order";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Error from "./ErrorPage";
 
-// import Return from "./Return";
 const Routes = () => {
-  const { isAuth } = useAuth();
-
-  const publicRoutes = [
+  const routes = [
     {
       element: <Layout />,
       errorElement: <Error />,
@@ -20,19 +17,11 @@ const Routes = () => {
         {
           path: "/Order",
           element: <Order />,
-          action: loginAction,
         },
       ],
     },
   ];
-
-  const router = createBrowserRouter([
-    ...publicRoutes,
-    ...(!isAuth ? protectedRoutes : []),
-    ...protectedRoutes,
-  ]);
-
+  const router = createBrowserRouter([...routes]);
   return <RouterProvider router={router} />;
 };
-
 export default Routes;
