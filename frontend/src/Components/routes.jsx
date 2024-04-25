@@ -3,6 +3,7 @@ import Home from "../Pages/home";
 import Order from "../Pages/Order";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./ErrorPage";
+import Contact from "../Pages/contact";
 
 const Routes = () => {
   const routes = [
@@ -17,6 +18,10 @@ const Routes = () => {
         {
           path: "/Order",
           element: <Order />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
         },
       ],
     },
