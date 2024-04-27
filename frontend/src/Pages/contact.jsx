@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form">
+    <div className="flex column center">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
