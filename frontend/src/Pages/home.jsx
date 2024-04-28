@@ -38,7 +38,7 @@ function Home() {
         </p>
       </section>
       <footer className="home-footer">
-        <p>© 2023 Carroll Coffee. All rights reserved.</p>
+        <p>© 2024 Carroll Coffee. All rights reserved.</p>
       </footer>
     </div>
   );
