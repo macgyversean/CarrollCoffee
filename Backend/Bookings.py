@@ -1,6 +1,7 @@
 from typing import Optional, List
 from pydantic import BaseModel
 from datetime import datetime
+from db.database import Base, engine
 
 class Bookings(BaseModel): #no RLS
     name : str
@@ -9,3 +10,5 @@ class Bookings(BaseModel): #no RLS
     message: str
     date: str
     Owner_ID: str
+
+    Base.metadata.create_all(engine)
